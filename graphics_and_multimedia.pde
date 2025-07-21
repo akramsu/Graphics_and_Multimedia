@@ -1203,6 +1203,18 @@ void drawTreesSunset(float sunsetProgress) {
  * Created by: Processing Animation
  */
 
+// =================== AUDIO LIBRARY IMPORTS ===================
+import ddf.minim.*;
+import ddf.minim.analysis.*;
+import ddf.minim.effects.*;
+import ddf.minim.signals.*;
+import ddf.minim.spi.*;
+import ddf.minim.ugens.*;
+
+// =================== AUDIO VARIABLES ===================
+Minim minim;
+AudioPlayer backgroundMusic;
+
 // =================== GLOBAL VARIABLES ===================
 int counter = 0; // Frame counter
 // float fadeAlpha = 0; // For fade effects - REMOVED
@@ -1255,6 +1267,24 @@ String exportFolder = "frames/"; // Folder to save frames
 void setup() {
   fullScreen();
   background(0);
+  
+  // =================== AUDIO INITIALIZATION ===================
+  minim = new Minim(this);
+  
+  // Load background music - replace "background_music.mp3" with your MP3 filename
+  backgroundMusic = minim.loadFile("data/audio/background_music.mp3");
+  
+  if (backgroundMusic == null) {
+    println("ERROR: Could not load audio file. Please make sure:");
+    println("1. Your MP3 file is named 'background_music.mp3'");
+    println("2. It's placed in the 'data/audio/' folder");
+    println("3. The file is a valid MP3 format");
+  } else {
+    println("Audio loaded successfully!");
+    // Start playing the background music
+    backgroundMusic.play();
+  }
+  
   println("=== SANGKURIANG INTERACTIVE CONTROLS ===");
   println("Press SPACEBAR to toggle Interactive Mode");
   println("In Interactive Mode:");
@@ -1472,7 +1502,16 @@ void keyPressed() {
       counter = 0;
       currentScene = 0;
       interactiveMode = false;
-      println("Restarted animation");
+      
+      // Restart background music
+      if (backgroundMusic != null) {
+        backgroundMusic.rewind();
+        if (!backgroundMusic.isPlaying()) {
+          backgroundMusic.play();
+        }
+      }
+      
+      println("Restarted animation and audio");
     } else {
       // Start video recording if not in interactive mode
       if (!exportingFrames) {
@@ -1529,6 +1568,17 @@ void keyPressed() {
       println("Quick jump to Scene 24 (Epilog)");
     }
   }
+}
+
+// Properly close audio resources when program ends
+void stop() {
+  if (backgroundMusic != null) {
+    backgroundMusic.close();
+  }
+  if (minim != null) {
+    minim.stop();
+  }
+  super.stop();
 }
 
 // =================== SCENE FUNCTIONS ===================
