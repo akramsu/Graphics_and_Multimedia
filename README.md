@@ -10,34 +10,6 @@ This animation brings to life the epic tale of Sangkuriang, featuring:
 - **Sangkuriang** - The tragic hero who unknowingly falls in love with his own mother
 - **Mount Tangkuban Perahu** - The overturned boat that became a mountain
 
-## 🎬 Animation Features
-
-### **24 Animated Scenes** (3 minutes total)
-1. **Scene 0** - Title Introduction
-2. **Scene 1** - Dayang Sumbi in the forest hut
-3. **Scene 2** - Tumang appears
-4. **Scene 3** - Evening prayers
-5. **Scene 4** - Birth of Sangkuriang
-6. **Scene 5** - Sangkuriang hunting
-7. **Scene 6** - Sangkuriang loses Tumang
-8. **Scene 7** - Sangkuriang kills Tumang in anger
-9. **Scene 8** - Dayang Sumbi discovers the truth
-10. **Scene 9** - Sangkuriang banished
-11. **Scene 10** - Time passes
-12. **Scene 11** - Adult Sangkuriang in exile
-13. **Scene 12** - Meeting with Dayang Sumbi
-14. **Scene 13** - Falling in love
-15. **Scene 14** - Dayang Sumbi realizes his identity
-16. **Scene 15** - Dayang Sumbi refuses marriage
-17. **Scene 16** - The impossible condition
-18. **Scene 17** - Building the dam
-19. **Scene 18** - Creating the giant boat
-20. **Scene 19** - Dayang Sumbi tricks the dawn
-21. **Scene 20** - Sangkuriang fails and rages
-22. **Scene 21** - Kicking the boat
-23. **Scene 22** - Formation of Mount Tangkuban Perahu
-24. **Scene 23** - Dayang Sumbi disappears
-25. **Scene 24** - Eternal epilogue
 
 ## 🎵 Audio Integration
 
