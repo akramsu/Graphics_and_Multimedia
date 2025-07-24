@@ -29,13 +29,50 @@ graphics_and_multimedia/
 
 ### **Prerequisites:**
 - [Processing IDE](https://processing.org/download) (version 3.0 or higher)
-- Minim audio library (usually included with Processing)
+- Minim audio library (installation instructions below)
 
-### **Installation:**
+### **Required Libraries Installation:**
+
+This project requires the **Minim** library for audio functionality. Follow these steps to install it:
+
+#### **Method 1: Using Processing Library Manager (Recommended)**
+1. Open Processing IDE
+2. Go to **Sketch → Import Library → Add Library...**
+3. In the Library Manager window:
+   - Search for "Minim" in the search box
+   - Find "Minim" by Damien Di Fede
+   - Click "Install"
+4. Wait for installation to complete
+5. Restart Processing IDE
+
+#### **Method 2: Alternative Library Manager Access**
+- Go to **Tools → Manage Libraries...**
+- Search for "Minim" and install it
+
+#### **Method 3: Manual Installation**
+If the Library Manager doesn't work:
+1. Find your Processing sketchbook folder (File → Preferences → Sketchbook location)
+2. Create a `libraries` folder in your sketchbook if it doesn't exist
+3. Download Minim from: https://github.com/ddf/Minim
+4. Extract to `[sketchbook]/libraries/minim/`
+
+#### **Verify Installation**
+The following imports should work without errors:
+```processing
+import ddf.minim.*;
+import ddf.minim.analysis.*;
+import ddf.minim.effects.*;
+import ddf.minim.signals.*;
+import ddf.minim.spi.*;
+import ddf.minim.ugens.*;
+```
+
+### **Project Installation:**
 1. Clone or download this repository
 2. Open `graphics_and_multimedia.pde` in Processing IDE
-3. Place your MP3 audio file in `data/audio/background_music.mp3`
-4. Run the sketch (Press play button or Ctrl+R)
+3. **Install Minim library** (see above instructions)
+4. Place your MP3 audio file in `data/audio/background_music.mp3`
+5. Run the sketch (Press play button or Ctrl+R)
 
 ### **First Run:**
 - The animation will start automatically in fullscreen
